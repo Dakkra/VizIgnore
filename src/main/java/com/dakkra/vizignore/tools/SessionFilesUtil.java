@@ -7,7 +7,7 @@ import java.util.Objects;
 
 public class SessionFilesUtil {
     public static final String SESSION_DIRECTORY_NAME = ".VizIgnore";
-    public static final String GITIGNOR_FILE_NAME = ".gitignore";
+    public static final String GITIGNORE_FILE_NAME = GitIgnoreUtil.GITIGNORE_FILE_NAME;
     private static final String SESSION_FILE_NAME = "session";
 
     public static File applicationDirectory = null;
@@ -37,7 +37,7 @@ public class SessionFilesUtil {
         if (d != null && d.exists() && d.isDirectory()) {
             try {
                 for (File f : d.listFiles()) {
-                    if (f.getName().equals(GITIGNOR_FILE_NAME)) return true;
+                    if (f.getName().equals(GITIGNORE_FILE_NAME)) return true;
                 }
             } catch (NullPointerException e) {
                 return false;
