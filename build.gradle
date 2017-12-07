@@ -1,0 +1,31 @@
+group 'dakkra'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+sourceCompatibility = 1.8
+mainClassName = 'com.dakkra.vizignore.VizIgnore'
+version = '0.1.1-Dev'
+def vendor = 'Chris Soderquist (http://dakkra.com)'
+
+jar {
+    manifest {
+        attributes 'Name': 'VizIgnore',
+                'Specification-Title': 'Spectrum Video Renderer',
+                'Specification-Vendor': vendor,
+                'Specification-Version': version,
+                'Implementation-Title': 'vizignore',
+                'Implementation-Version': version,
+                'Implementation-Vendor': vendor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
