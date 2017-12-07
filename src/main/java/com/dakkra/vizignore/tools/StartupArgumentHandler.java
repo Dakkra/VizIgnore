@@ -18,6 +18,10 @@ public class StartupArgumentHandler {
                     continueProgram = false;
                     break;
                 }
+                case "--clean": {
+                    SessionFilesUtil.clearSession();
+                    break;
+                }
                 default:
                     break;
             }
@@ -34,6 +38,7 @@ public class StartupArgumentHandler {
     private static void printHelp() {
         printVersion();
         System.out.println();
+        System.out.println("--clean     Deletes all session files (clean start)");
         System.out.println("--help      Prints this help menu");
         System.out.println("--version   Prints the version number");
     }

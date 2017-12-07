@@ -16,19 +16,49 @@
    id="svg8"
    enable-background="new"
    inkscape:version="0.92.1 r15371"
-   sodipodi:docname="icon.svg">
+   sodipodi:docname="icon.svg"
+   inkscape:export-filename="D:\amazo\GIT\VizIgnore\src\main\resources\icon.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120">
   <defs
      id="defs2">
     <filter
        inkscape:collect="always"
        style="color-interpolation-filters:sRGB"
-       id="filter3750">
+       id="filter42">
       <feBlend
          inkscape:collect="always"
          mode="saturation"
          in2="BackgroundImage"
-         id="feBlend3752" />
+         id="feBlend44" />
     </filter>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath62">
+      <text
+         transform="scale(1.0495561,0.95278376)"
+         id="text66"
+         y="311.50882"
+         x="-3.126317"
+         style="font-style:normal;font-weight:normal;font-size:304.16485596px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.60412121"
+         xml:space="preserve"><tspan
+           style="stroke-width:7.60412121"
+           y="311.50882"
+           x="-3.126317"
+           id="tspan64"
+           sodipodi:role="line">V</tspan></text>
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath72">
+      <rect
+         style="fill:#000000;stroke-width:0.27452764"
+         id="rect74"
+         width="212.15855"
+         height="90.925095"
+         x="-0.24595134"
+         y="145.70412" />
+    </clipPath>
   </defs>
   <sodipodi:namedview
      id="base"
@@ -38,10 +68,10 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="125.22282"
-     inkscape:cy="323.89505"
+     inkscape:cx="157.74973"
+     inkscape:cy="336.62297"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer1"
      showgrid="false"
      units="px"
      inkscape:window-width="1920"
@@ -57,54 +87,64 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <g
+     transform="translate(0,-85.333333)"
+     id="g60"
+     inkscape:groupmode="layer"
      inkscape:label="Circle"
+     style="display:inline">
+    <ellipse
+       ry="105.8231"
+       rx="105.83038"
+       cx="105.83334"
+       cy="191.16667"
+       id="ellipse58"
+       style="fill:#782121;stroke-width:0.26456684" />
+  </g>
+  <g
+     inkscape:label="Circle V Mask"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-85.333333)">
+     transform="translate(0,-85.333333)"
+     style="display:inline">
     <ellipse
-       style="fill:#782121;stroke-width:0.26456684"
+       style="fill:#ffffff;stroke-width:0.26456684"
        id="path3688"
        cy="191.16667"
        cx="105.83334"
        rx="105.83038"
-       ry="105.8231" />
+       ry="105.8231"
+       clip-path="url(#clipPath62)" />
   </g>
+  <g
+     style="display:inline;opacity:0.80199998"
+     inkscape:label="Circle Rect Mask"
+     inkscape:groupmode="layer"
+     id="g70"
+     transform="translate(0,-85.333333)">
+    <ellipse
+       style="fill:#000000;stroke-width:0.26456684"
+       id="ellipse68"
+       cy="191.16667"
+       cx="105.83334"
+       rx="105.83038"
+       ry="105.8231"
+       clip-path="url(#clipPath72)" />
+  </g>
+  <g
+     style="display:inline;opacity:1;filter:url(#filter42)"
+     inkscape:label="V"
+     id="g56"
+     inkscape:groupmode="layer" />
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="rect"
-     style="display:inline;opacity:0.806">
-    <rect
-       style="fill:#000000;stroke-width:0.27452764"
-       id="rect3717"
-       width="212.15857"
-       height="90.925095"
-       x="-0.24595134"
-       y="60.370785" />
-  </g>
-  <g
-     inkscape:groupmode="layer"
-     id="layer2"
-     inkscape:label="V"
-     style="display:inline;opacity:1;filter:url(#filter3750)">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:304.16485596px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:7.60412121"
-       x="-3.1263168"
-       y="311.50882"
-       id="text3692"
-       transform="matrix(1.0495561,0,0,0.95278377,0,-85.333332)"><tspan
-         sodipodi:role="line"
-         id="tspan3690"
-         x="-3.1263168"
-         y="311.50882"
-         style="stroke-width:7.60412121">V</tspan></text>
-  </g>
+     style="display:inline;opacity:0.806" />
   <g
      inkscape:groupmode="layer"
      id="layer5"

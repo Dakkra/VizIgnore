@@ -20,6 +20,8 @@ public class VizIgnore {
      */
     public static void main(String[] args) {
         System.out.println("Welcome to VixIgnore!");
+        String homeDirectoryPath = System.getProperty("user.home");
+        homeDirectory = new File(homeDirectoryPath);
         StartupArgumentHandler.handle(args);
         if (StartupArgumentHandler.shouldContinue()) initialize();
     }
@@ -28,8 +30,6 @@ public class VizIgnore {
      * Initializes the application
      */
     private static void initialize() {
-        String homeDirectoryPath = System.getProperty("user.home");
-        homeDirectory = new File(homeDirectoryPath);
         sessionDirectory = SessionFilesUtil.restore();
         if (homeDirectory.equals(sessionDirectory))
             SwingUtilities.invokeLater(VizIgnore::initWorkingDir);
@@ -63,7 +63,7 @@ public class VizIgnore {
      * Should be ran on a separate thread
      */
     private static void run() {
-        System.out.println(sessionDirectory.getAbsolutePath());
+        System.out.println("Session Directory: " + sessionDirectory.getAbsolutePath());
         SessionFilesUtil.saveSessionFile(sessionDirectory);
         //TODO main loop and gui
         shutdown();

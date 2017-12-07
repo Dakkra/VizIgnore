@@ -21,6 +21,14 @@ public class SessionFilesUtil {
     }
 
     /**
+     * Deletes the session file
+     */
+    public static void clearSession() {
+        File sFile = getSessionFile();
+        sFile.delete();
+    }
+
+    /**
      * Checks to see if the file has a .gitignore file
      * <p>
      * Returns false if there is no gitignore file or if the supplied file is not a directory
