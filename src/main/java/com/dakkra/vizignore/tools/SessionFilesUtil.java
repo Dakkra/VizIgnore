@@ -1,11 +1,15 @@
-package com.dakkra.vizignore;
+package com.dakkra.vizignore.tools;
+
+import com.dakkra.vizignore.VizIgnore;
 
 import java.io.*;
 import java.util.Objects;
 
 public class SessionFilesUtil {
     public static final String SESSION_DIRECTORY_NAME = ".VizIgnore";
+    public static final String GITIGNOR_FILE_NAME = ".gitignore";
     private static final String SESSION_FILE_NAME = "session";
+
     public static File applicationDirectory = null;
 
     /**
@@ -16,6 +20,23 @@ public class SessionFilesUtil {
         return getSessionDirectory();
     }
 
+    /**
+     * Checks to see if the file has a .gitignore file
+     * <p>
+     * Returns false if there is no gitignore file or if the supplied file is not a directory
+     */
+    public static boolean hasGitIgnore(File d) {
+        if (d != null && d.exists() && d.isDirectory()) {
+            try {
+                for (File f : d.listFiles()) {
+                    if (f.getName().equals(GITIGNOR_FILE_NAME)) return true;
+                }
+            } catch (NullPointerException e) {
+                return false;
+            }
+        }
+        return false;
+    }
 
     /**
      * Gets the session file. If it doesn't exist, creates it.

@@ -13,6 +13,7 @@ def vendor = 'Chris Soderquist (http://dakkra.com)'
 jar {
     manifest {
         attributes 'Name': 'VizIgnore',
+                'Main-Class': mainClassName,
                 'Specification-Title': 'Spectrum Video Renderer',
                 'Specification-Vendor': vendor,
                 'Specification-Version': version,
