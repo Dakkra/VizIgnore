@@ -1,14 +1,12 @@
 package com.dakkra.vizignore;
 
 import com.dakkra.vizignore.tools.BasicUserInteraction;
-import com.dakkra.vizignore.tools.GitIgnoreUtil;
 import com.dakkra.vizignore.tools.SessionFilesUtil;
 import com.dakkra.vizignore.tools.StartupArgumentHandler;
 
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
-import java.util.ArrayList;
 
 public class VizIgnore {
 
@@ -67,7 +65,6 @@ public class VizIgnore {
     private static void run() {
         SessionFilesUtil.saveSessionFile(sessionDirectory);
         System.out.println("Session Directory: " + sessionDirectory.getAbsolutePath());
-        ArrayList<String> files = GitIgnoreUtil.getAllIgnoredNames();
         //TODO main loop and gui
         shutdown();
     }

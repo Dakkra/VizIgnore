@@ -95,7 +95,7 @@ public class GitIgnoreUtil {
         File ignoreFile = getFile();
         ArrayList<String> fileNames = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader(ignoreFile))) {
-            String buff = null;
+            String buff;
             while ((buff = reader.readLine()) != null) {
                 File f = new File(VizIgnore.sessionDirectory.getAbsolutePath() + File.separator + buff);
                 if (f.exists()) fileNames.add(buff);
