@@ -16,7 +16,7 @@ public class VizIgnore {
     private static Thread applicationThread;
 
     /**
-     * Entry point`
+     * Entry point
      */
     public static void main(String[] args) {
         System.out.println("Welcome to VixIgnore!");
