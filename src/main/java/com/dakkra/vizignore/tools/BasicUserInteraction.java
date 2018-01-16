@@ -10,6 +10,8 @@ public class BasicUserInteraction {
 
     /**
      * Asks the user to provide a directory by letting them choose with a file chooser
+     *
+     * @param cb FileCallback to be called when file has been obtained
      */
     public static void getDirectoryFromUser(FileCallback cb) {
         File dir = null;

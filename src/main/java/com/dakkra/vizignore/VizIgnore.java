@@ -10,7 +10,7 @@ import java.io.File;
 
 public class VizIgnore {
 
-    public static final String APPLICATION_VERSION = "0.1.1-Dev";
+    public static final String APPLICATION_VERSION = "0.1.1-InDev";
     public static File homeDirectory = null;
     public static File sessionDirectory = null;
     private static Thread applicationThread;
@@ -19,7 +19,7 @@ public class VizIgnore {
      * Entry point
      */
     public static void main(String[] args) {
-        System.out.println("Welcome to VixIgnore!");
+        System.out.println("Welcome to VizIgnore!");
         String homeDirectoryPath = System.getProperty("user.home");
         homeDirectory = new File(homeDirectoryPath);
         StartupArgumentHandler.handle(args);
