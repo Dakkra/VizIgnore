@@ -23,6 +23,13 @@ jar {
     }
 }
 
+run {
+    //Process arguments from gradle commands
+    if (project.hasProperty("margs")) {
+        args(margs.split(","));
+    }
+}
+
 repositories {
     mavenCentral()
 }
