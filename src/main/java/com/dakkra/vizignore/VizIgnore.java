@@ -1,5 +1,6 @@
 package com.dakkra.vizignore;
 
+import com.dakkra.vizignore.gui.MainWindow;
 import com.dakkra.vizignore.tools.BasicUserInteraction;
 import com.dakkra.vizignore.tools.SessionFilesUtil;
 import com.dakkra.vizignore.tools.StartupArgumentHandler;
@@ -14,6 +15,7 @@ public class VizIgnore {
     public static File homeDirectory = null;
     public static File sessionDirectory = null;
     private static Thread applicationThread;
+    private static boolean keepalive = true;
 
     /**
      * Entry point
@@ -65,8 +67,31 @@ public class VizIgnore {
     private static void run() {
         SessionFilesUtil.saveSessionFile(sessionDirectory);
         System.out.println("Session Directory: " + sessionDirectory.getAbsolutePath());
-        //TODO main loop and gui
+        SwingUtilities.invokeLater(VizIgnore::launchWindow);
+        int keepAliveCount = 0;
+        while (keepalive) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            //TODO main loop here?
+        }
         shutdown();
+    }
+
+    /**
+     * Launches a new window for this application. Should only be used by Swing Utilities
+     */
+    private static void launchWindow() {
+        MainWindow mw = new MainWindow();
+    }
+
+    /**
+     * Alert the application that it can close
+     */
+    public static void readyToClose() {
+        keepalive = false;
     }
 
     /**
@@ -75,8 +100,7 @@ public class VizIgnore {
     private static void shutdown() {
         System.out.println("Exiting VizIgnore...");
         //Dispose all frames left over by AWT layer
-        for (Frame f : Frame.getFrames()) {
+        for (Frame f : Frame.getFrames())
             f.dispose();
-        }
     }
 }

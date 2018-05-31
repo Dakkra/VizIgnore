@@ -5,6 +5,9 @@ import com.dakkra.vizignore.VizIgnore;
 public class StartupArgumentHandler {
     private static boolean continueProgram = true;
 
+    /**
+     * Process the startup arguments for this application
+     */
     public static void handle(String... args) {
         for (String s : args) {
             switch (s) {
