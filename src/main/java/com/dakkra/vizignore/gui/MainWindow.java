@@ -18,7 +18,7 @@ public class MainWindow extends JFrame {
     }
 
     private void readyToClose() {
-        VizIgnore.readyToClose();
+        VizIgnore.shutdown();
     }
 
     class FrameEar implements WindowListener {

@@ -15,7 +15,6 @@ public class VizIgnore {
     public static File homeDirectory = null;
     public static File sessionDirectory = null;
     private static Thread applicationThread;
-    private static boolean keepalive = true;
 
     /**
      * Entry point
@@ -68,16 +67,6 @@ public class VizIgnore {
         SessionFilesUtil.saveSessionFile(sessionDirectory);
         System.out.println("Session Directory: " + sessionDirectory.getAbsolutePath());
         SwingUtilities.invokeLater(VizIgnore::launchWindow);
-        int keepAliveCount = 0;
-        while (keepalive) {
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-            //TODO main loop here?
-        }
-        shutdown();
     }
 
     /**
@@ -88,16 +77,9 @@ public class VizIgnore {
     }
 
     /**
-     * Alert the application that it can close
-     */
-    public static void readyToClose() {
-        keepalive = false;
-    }
-
-    /**
      * Shuts down the program. Should be called when the application is done executing.
      */
-    private static void shutdown() {
+    public static void shutdown() {
         System.out.println("Exiting VizIgnore...");
         //Dispose all frames left over by AWT layer
         for (Frame f : Frame.getFrames())
