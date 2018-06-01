@@ -13,7 +13,7 @@ public class BasicUserInteraction {
      *
      * @param cb FileCallback to be called when file has been obtained
      */
-    public static void getDirectoryFromUser(FileCallback cb) {
+    public static void getSessionDirectoryFromUser(FileCallback cb) {
         File dir = null;
         JFrame iconFrame = new JFrame();
         iconFrame.setIconImage(GeneralIO.readResourceImage("iconSmall.png"));

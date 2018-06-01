@@ -1,6 +1,7 @@
 package com.dakkra.vizignore.gui;
 
 import com.dakkra.vizignore.VizIgnore;
+import com.dakkra.vizignore.tools.GeneralIO;
 
 import javax.swing.*;
 import java.awt.*;
@@ -10,11 +11,23 @@ import java.awt.event.WindowListener;
 public class MainWindow extends JFrame {
 
     public MainWindow() {
-        JFrame mainFrame = new JFrame("VizIgnore");
-        mainFrame.setSize(new Dimension(500, 500));
-        mainFrame.addWindowListener(new FrameEar(mainFrame));
-        mainFrame.setLocationRelativeTo(null);
-        mainFrame.setVisible(true);
+        init();
+        setVisible(true);
+    }
+
+    /**
+     * Initialize this window and it's contents
+     */
+    private void init() {
+        setTitle("VizIgnore");
+        setSize(new Dimension(500, 500));
+        setIconImage(GeneralIO.readResourceImage("iconSmall.png"));
+        addWindowListener(new FrameEar(this));
+        setLocationRelativeTo(null);
+
+        //Add main panel
+        MainPanel mainPane = new MainPanel();
+        this.add(mainPane, BorderLayout.CENTER);
     }
 
     private void readyToClose() {

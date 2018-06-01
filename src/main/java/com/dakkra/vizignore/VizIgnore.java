@@ -41,7 +41,7 @@ public class VizIgnore {
      * Makes the user select a working directory
      */
     private static void initWorkingDir() {
-        BasicUserInteraction.getDirectoryFromUser(VizIgnore::start);
+        BasicUserInteraction.getSessionDirectoryFromUser(VizIgnore::start);
     }
 
     /**
@@ -59,7 +59,7 @@ public class VizIgnore {
     }
 
     /**
-     * Main Application loop
+     * Launches application loop/GUI
      * <p>
      * Should be ran on a separate thread
      */
