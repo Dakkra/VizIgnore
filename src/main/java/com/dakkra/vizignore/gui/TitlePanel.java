@@ -40,4 +40,14 @@ public class TitlePanel extends JPanel {
     public Dimension getMaximumSize() {
         return new Dimension(Integer.MAX_VALUE, UserInterfaceConstants.TITLE_FONT_SIZE);
     }
+
+    @Override
+    public Dimension getMinimumSize() {
+        return new Dimension(UserInterfaceConstants.MIN_WIDTH, 40);
+    }
+
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(UserInterfaceConstants.MIN_WIDTH, 40);
+    }
 }

@@ -25,9 +25,12 @@ public class MainWindow extends JFrame {
         addWindowListener(new FrameEar(this));
         setLocationRelativeTo(null);
 
+        //Title pane
+        this.add(new TitlePanel(VizIgnore.sessionDirectory.getName()), BorderLayout.NORTH);
         //Add main panel
         MainPanel mainPane = new MainPanel();
-        this.add(mainPane, BorderLayout.CENTER);
+        JScrollPane sp = new JScrollPane(mainPane);
+        this.add(sp, BorderLayout.CENTER);
     }
 
     private void readyToClose() {
