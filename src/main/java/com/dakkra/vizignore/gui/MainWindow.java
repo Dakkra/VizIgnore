@@ -19,7 +19,7 @@ public class MainWindow extends JFrame {
      * Initialize this window and it's contents
      */
     private void init() {
-        setTitle("VizIgnore");
+        setTitle("VizIgnore - " + VizIgnore.sessionDirectory.getName());
         setSize(new Dimension(500, 500));
         setIconImage(GeneralIO.readResourceImage("iconSmall.png"));
         addWindowListener(new FrameEar(this));
@@ -30,6 +30,8 @@ public class MainWindow extends JFrame {
         //Add main panel
         MainPanel mainPane = new MainPanel();
         JScrollPane sp = new JScrollPane(mainPane);
+        //Faster scrolling
+        sp.getVerticalScrollBar().setUnitIncrement(20);
         this.add(sp, BorderLayout.CENTER);
     }
 
